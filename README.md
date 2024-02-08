@@ -1,4 +1,4 @@
-# PadroesProjeto
+# Padroes de Projeto
 Padrões de Projeto em Kotlin
 
 1 - Singleton
