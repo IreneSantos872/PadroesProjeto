@@ -6,7 +6,7 @@ class CustomOrder private constructor(
   val total: Double,
   val deliveryAddress: String
 ) {
-  /** Classe interna para "linkar" o Builder com a classe CustomOrder **/
+  /** Classe interna para "linkar" o Bulder com a classe CustomOrder **/
   class Builder {
     private var customerName: String = ""
     private var products: MutableList<Product> = mutableListOf()
@@ -17,9 +17,9 @@ class CustomOrder private constructor(
     fun setDeliveryAddress(address: String) = apply { deliveryAddress = address }
 
     fun build(): CustomOrder {
-		val orderTotal = products.sumByDouble(it.price * it.quantity)
-        return CustomOrder(customerName, products.toList(), orderTotal, deliveryAddress))
-    }
+        val orderTotal = products.sumByDouble {it.price * it.quantity }
+        return CustomOrder(customerName, products.toList(), orderTotal, deliveryAddress)
+      }
   }
   
   fun printReceipt() {
@@ -33,20 +33,20 @@ class CustomOrder private constructor(
 }
 
 fun main() {
-  val customerName = "Paulo"
+  val customerName = readLine() ?: ""
     
   val orderBuilder = CustomOrder.Builder().setCustomerName(customerName)
 
-  val numProducts = 2
+  val numProducts = readLine()?.toIntOrNull() ?: 0
   for (i in 1..numProducts) {
-    val productName = "cafe";
-    val productPrice = 1.5;
-    val productQuantity = 3;
+    val productName = readLine() ?: ""
+    val productPrice = readLine()?.toDoubleOrNull() ?: 0.0
+    val productQuantity = readLine()?.toIntOrNull() ?: 0
 
     orderBuilder.addProduct(Product(productName, productPrice, productQuantity))
   }
 
-  val deliveryAddress = "Lagoa"
+  val deliveryAddress = readLine() ?: ""
 
   val customOrder = orderBuilder.setDeliveryAddress(deliveryAddress).build()
 
