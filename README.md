@@ -83,18 +83,19 @@ Padrões de Projeto em Kotlin
     Gerando Slugs de Livros
 
     Descrição
-    As Extension Functions, ou Funções de Extensão, são recursos poderosos              disponíveis em linguagens de programação que permitem adicionar métodos a           classes existentes sem a necessidade de modificar o código-fonte original           dessas classes. Isso facilita a criação de novas funcionalidades ou                 comportamentos para tipos de dados já existentes, mesmo quando você não tem         acesso ao código fonte original desses tipos.
+    As Extension Functions, ou Funções de Extensão, são recursos poderosos           disponíveis em linguagens de programação que permitem adicionar métodos a         classes existentes sem a necessidade de modificar o código-fonte original         dessas classes. Isso facilita a criação de novas funcionalidades ou               comportamentos para tipos de dados já existentes, mesmo quando você não tem       acesso ao código fonte original desses tipos.
     
-    Neste desafio, com foco em um sistema de gerenciamento de livros para uma           biblioteca digital, foi implementado uma solução que permita gerar um 
-    "slug" único para representar os dados de um livro. Um "slug" é uma versão  
-    simplificada e amigável para URLs de um texto, com espaços substituídos por 
-    traços (-) e caracteres especiais removidos. A solução requer que você crie uma 
-    função de extensão generateSlug() para a classe String que fará essa 
+   Neste desafio, com foco em um sistema de gerenciamento de livros para uma         biblioteca digital, foi implementado uma solução que permita gerar um 
+   "slug" único para representar os dados de um livro. Um "slug" é uma versão  
+   simplificada e amigável para URLs de um texto, com espaços substituídos por 
+   traços (-) e caracteres especiais removidos. A solução requer que você crie 
+   uma função de extensão generateSlug() para a classe String que fará essa 
     transformação.
     
     Funcionalidade a ser implementada:
     
-    generateSlug(): Crie uma função de extensão chamada generateSlug() para a           classe String. A função deve gerar um "slug" para a string fornecida, removendo     espaços e caracteres especiais, substituindo-os por traços.
+    generateSlug(): Crie uma função de extensão chamada generateSlug() para a          classe String. A função deve gerar um "slug" para a string fornecida, 
+    removendo espaços e caracteres especiais, substituindo-os por traços.
     
     Entrada
     A entrada consistirá em duas strings: o título e o autor de um livro.
@@ -104,4 +105,31 @@ Padrões de Projeto em Kotlin
     Slug gerado para o livro:
     nome-livro-separado-por-ifens_nome-autor-separado-por-ifens
     
+
         
+5 - PROCESSAMENTO PARALELO/ASSINCRONO
+
+    Tempo de Download Paralelo
+
+    Descrição
+No mundo da programação, frequentemente enfrentamos situações onde múltiplas tarefas precisam ser executadas simultaneamente para otimizar o tempo de resposta ou processamento. Um exemplo comum é o download de múltiplos arquivos da internet.
+
+Para este desafio, suponha que você tenha uma lista de URLs que deseja "baixar". Seu objetivo é simular o download desses arquivos de forma paralela e imprimir o tamanho de cada URL após seu "download" ter sido disparado. Para simplificar, cada URL leva exatamente 1 segundo para ser "baixado".
+
+Requisitos:
+
+Defina uma lista de URLs que você deseja "baixar".
+Crie uma função para simular o "download" de uma URL. Essa função deve aceitar uma URL como entrada e retornar o tamanho da URL.
+Implementado uma lógica que permita iniciar o "download" de várias URLs em paralelo.
+Imprime o tamanho de cada URL na ordem em que foram inseridas.
+
+Entrada
+A entrada consiste em uma lista de URLs, uma em cada linha. Uma linha vazia indica o fim da lista.
+
+Saída
+A saída deve mostrar o tamanho de cada URL na ordem em que foram inseridas, seguido pelo "Tempo total", que é simplesmente a contagem de URLs (por mais conta-intuitivo que pareça 😁):
+Iniciando downloads...
+Arq1: $tamanhoUrl1
+Arq2: $tamanhoUrl2
+Tempo total: $quantidadeDeUrls
+
