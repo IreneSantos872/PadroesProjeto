@@ -76,3 +76,32 @@ Padrões de Projeto em Kotlin
     Taxas de conversão para a adaptação:
     1 USD para GBP = 0.80
     1 GBP para EUR = 1.0625
+
+
+4 - EXTENSION FUNCTION
+
+    Gerando Slugs de Livros
+
+    Descrição
+    As Extension Functions, ou Funções de Extensão, são recursos poderosos              disponíveis em linguagens de programação que permitem adicionar métodos a           classes existentes sem a necessidade de modificar o código-fonte original           dessas classes. Isso facilita a criação de novas funcionalidades ou                 comportamentos para tipos de dados já existentes, mesmo quando você não tem         acesso ao código fonte original desses tipos.
+    
+    Neste desafio, com foco em um sistema de gerenciamento de livros para uma           biblioteca digital, foi implementado uma solução que permita gerar um 
+    "slug" único para representar os dados de um livro. Um "slug" é uma versão  
+    simplificada e amigável para URLs de um texto, com espaços substituídos por 
+    traços (-) e caracteres especiais removidos. A solução requer que você crie uma 
+    função de extensão generateSlug() para a classe String que fará essa 
+    transformação.
+    
+    Funcionalidade a ser implementada:
+    
+    generateSlug(): Crie uma função de extensão chamada generateSlug() para a           classe String. A função deve gerar um "slug" para a string fornecida, removendo     espaços e caracteres especiais, substituindo-os por traços.
+    
+    Entrada
+    A entrada consistirá em duas strings: o título e o autor de um livro.
+    
+    Saída
+    Imprima o "slug" gerado para o livro, no seguinte padrão:
+    Slug gerado para o livro:
+    nome-livro-separado-por-ifens_nome-autor-separado-por-ifens
+    
+        
